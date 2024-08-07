@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { StepBoxActive } from '../ui/StepBox'
+import { StepBoxActive } from '@/components/ui/StepBox'
 
 const MultiStep = ({ href }: { href: string }) => {
   return (

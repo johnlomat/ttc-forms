@@ -1,6 +1,6 @@
 'use client'
 
-import Separator from '../ui/Separator'
+import Separator from '@/components/ui/Separator'
 import useToggleClick from '@/hooks/useToggleClick'
 
 const HeaderBody = ({ children }: { children: React.ReactNode }) => {

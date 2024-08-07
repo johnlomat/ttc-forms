@@ -4,6 +4,12 @@ import MultiStep from '@/components/MultiStep'
 import Separator from '@/components/ui/Separator'
 import Card from '@/components/ui/Card'
 import { HeadingTwo } from '@/components/ui/Headings'
+import FirstNameField from '@/components/Fields/FirstNameField'
+import LastNameField from '@/components/Fields/LastNameField'
+import AgeField from '@/components/Fields/AgeField'
+import SexField from '@/components/Fields/SexField'
+import EmailField from '@/components/Fields/EmailField'
+import AgreeField from '@/components/Fields/AgreeField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -110,6 +116,14 @@ export default function AlphaQuote() {
             <div className="space-y-4">
               <Card>
                 <HeadingTwo>Insured&apos;s Details</HeadingTwo>
+                <div className="grid grid-cols-2 gap-[15px]">
+                  <FirstNameField />
+                  <LastNameField />
+                  <AgeField />
+                  <SexField />
+                  <EmailField className="col-span-2" />
+                  <AgreeField className="col-span-2" />
+                </div>
               </Card>
             </div>
             <div className="space-y-4">
