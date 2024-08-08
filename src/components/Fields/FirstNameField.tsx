@@ -2,9 +2,9 @@ import FieldWrapper from '@/components/ui/FieldWrapper'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 
-const FirstNameField = () => {
+const FirstNameField = ({ className }: { className?: string }) => {
   return (
-    <FieldWrapper>
+    <FieldWrapper className={className || ''}>
       <Label htmlFor="first_name">
         First Name<span className="text-red-500"> *</span>
       </Label>

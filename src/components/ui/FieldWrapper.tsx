@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { cn } from '@/lib/utils'
 
 const FieldWrapper = ({
   children,
@@ -7,7 +7,7 @@ const FieldWrapper = ({
   children: React.ReactNode
   className?: string
 }) => {
-  return <div className={clsx(className, 'w-full items-center space-y-1.5')}>{children}</div>
+  return <div className={cn('w-full items-center space-y-1.5', className)}>{children}</div>
 }
 
 export default FieldWrapper

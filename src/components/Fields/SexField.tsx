@@ -10,9 +10,9 @@ import {
   SelectValue,
 } from '@/components/ui/Select'
 
-const SexField = () => {
+const SexField = ({ className }: { className?: string }) => {
   return (
-    <FieldWrapper>
+    <FieldWrapper className={className || ''}>
       <Label htmlFor="sex">
         Sex<span className="text-red-500"> *</span>
       </Label>

@@ -10,6 +10,7 @@ import AgeField from '@/components/Fields/AgeField'
 import SexField from '@/components/Fields/SexField'
 import EmailField from '@/components/Fields/EmailField'
 import AgreeField from '@/components/Fields/AgreeField'
+import PassportCountry from '@/components/Fields/PassportCountry'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -129,6 +130,9 @@ export default function AlphaQuote() {
             <div className="space-y-4">
               <Card>
                 <HeadingTwo>Program</HeadingTwo>
+                <div className="grid grid-cols-2 gap-[15px]">
+                  <PassportCountry />
+                </div>
               </Card>
             </div>
           </div>

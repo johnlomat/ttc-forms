@@ -10,7 +10,7 @@ const AgreeField = ({ className }: { className?: string }) => {
         <Checkbox id="terms" />
         <label
           htmlFor="terms"
-          className="text-[16px] leading-none text-neutral-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-[16px] leading-normal text-neutral-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           <span className="text-red-500">* </span>
           To continue, please click here so we can send your quote and other relevant info like
