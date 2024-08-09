@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
+import { Header, HeaderTitle, HeaderDescription, HeaderBody } from '@/components/Header'
 import MultiStep from '@/components/MultiStep'
 import Separator from '@/components/ui/Separator'
 import Card from '@/components/ui/Card'
@@ -13,6 +13,8 @@ import AgreeField from '@/components/Fields/AgreeField'
 import PassportCountryField from '@/components/Fields/PassportCountryField'
 import DestinationCountryField from '@/components/Fields/DestinationCountry'
 import ChurchMissionField from '@/components/Fields/ChurchMissionField'
+import StartDateField from '@/components/Fields/StartDateField'
+import LengthCoverageField from '@/components/Fields/LengthCoverageField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -24,16 +26,16 @@ export default function AlphaQuote() {
       <MultiStep href="https://www.talent-trust.com/alphaquote/" />
 
       <Header>
-        <Header.Title>
+        <HeaderTitle>
           Alpha Plan <span className="font-bold text-secondary">Quote</span>
-        </Header.Title>
-        <Header.Description>
+        </HeaderTitle>
+        <HeaderDescription>
           <p>
             Designed for missionaries serving more than one year, who don’t need cover within the
             USA.
           </p>
-        </Header.Description>
-        <Header.Body>
+        </HeaderDescription>
+        <HeaderBody>
           <div className="space-y-4 text-neutral-700">
             <p>
               The Alpha Plan provides international private medical insurance with extra care and
@@ -102,7 +104,7 @@ export default function AlphaQuote() {
               <span className="text-neutral-300">(click here for a more detailed comparison)</span>
             </p>
           </div>
-        </Header.Body>
+        </HeaderBody>
       </Header>
 
       <div className="w-full">
@@ -136,6 +138,8 @@ export default function AlphaQuote() {
                   <PassportCountryField className="col-span-1 md:col-span-2" />
                   <DestinationCountryField className="col-span-1 md:col-span-2" />
                   <ChurchMissionField className="col-span-1 md:col-span-2" />
+                  <StartDateField />
+                  <LengthCoverageField />
                 </div>
               </Card>
             </div>
