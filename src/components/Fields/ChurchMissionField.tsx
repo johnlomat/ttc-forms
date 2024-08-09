@@ -8,7 +8,7 @@ const ChurchMissionField = ({ className }: { className?: string }) => {
       <Label htmlFor="church_mission">
         Church/Mission<span className="text-red-500"> *</span>
       </Label>
-      <Input type="text" id="church_mission" />
+      <Input type="text" id="church_mission" placeholder="Mission name..." />
     </FieldWrapper>
   )
 }
