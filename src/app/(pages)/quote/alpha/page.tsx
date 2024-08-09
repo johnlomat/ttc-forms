@@ -12,6 +12,7 @@ import EmailField from '@/components/Fields/EmailField'
 import AgreeField from '@/components/Fields/AgreeField'
 import PassportCountryField from '@/components/Fields/PassportCountryField'
 import DestinationCountryField from '@/components/Fields/DestinationCountry'
+import ChurchMissionField from '@/components/Fields/ChurchMissionField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -114,26 +115,27 @@ export default function AlphaQuote() {
 
       <div className="w-full">
         <div className="container">
-          <div className="grid grid-cols-1 gap-[30px] md:grid-cols-5">
+          <div className="grid grid-cols-1 gap-x-0 gap-y-8 md:grid-cols-5 md:gap-x-[30px]">
             <div className="col-span-3 space-y-4">
               <Card>
                 <HeadingTwo>Insured&apos;s Details</HeadingTwo>
-                <div className="grid grid-cols-2 gap-[15px]">
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
                   <FirstNameField />
                   <LastNameField />
                   <AgeField />
                   <SexField />
-                  <EmailField className="col-span-2" />
-                  <AgreeField className="col-span-2" />
+                  <EmailField className="col-span-1 md:col-span-2" />
+                  <AgreeField className="col-span-1 md:col-span-2" />
                 </div>
               </Card>
             </div>
             <div className="col-span-2 space-y-4">
               <Card>
                 <HeadingTwo>Program</HeadingTwo>
-                <div className="grid grid-cols-2 gap-[15px]">
-                  <PassportCountryField className="col-span-2" />
-                  <DestinationCountryField className="col-span-2" />
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
+                  <PassportCountryField className="col-span-1 md:col-span-2" />
+                  <DestinationCountryField className="col-span-1 md:col-span-2" />
+                  <ChurchMissionField className="col-span-1 md:col-span-2" />
                 </div>
               </Card>
             </div>
