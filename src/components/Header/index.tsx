@@ -15,8 +15,4 @@ const Header = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-Header.Title = HeaderTitle
-Header.Description = HeaderDescription
-Header.Body = HeaderBody
-
-export default Header
+export { Header, HeaderTitle, HeaderDescription, HeaderBody }
