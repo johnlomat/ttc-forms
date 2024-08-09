@@ -9,12 +9,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/Select'
+import { FieldProps } from '@/types/FieldProps'
 
-const SexField = ({ className }: { className?: string }) => {
+const SexField = ({ className, description, required }: FieldProps) => {
   return (
     <FieldWrapper className={className || ''}>
       <Label htmlFor="sex">
-        Sex<span className="text-red-500"> *</span>
+        Sex{description && <span className="text-neutral-400"> {description}</span>}
+        {required && <span className="text-red-500"> *</span>}
       </Label>
       <Select>
         <SelectTrigger>

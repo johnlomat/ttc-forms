@@ -4,17 +4,12 @@ import MultiStep from '@/components/MultiStep'
 import Separator from '@/components/ui/Separator'
 import Card from '@/components/ui/Card'
 import { HeadingTwo } from '@/components/ui/Headings'
-import FirstNameField from '@/components/Fields/FirstNameField'
-import LastNameField from '@/components/Fields/LastNameField'
-import AgeField from '@/components/Fields/AgeField'
+import SingleField from '@/components/Fields/SingleField'
 import SexField from '@/components/Fields/SexField'
-import EmailField from '@/components/Fields/EmailField'
 import AgreeField from '@/components/Fields/AgreeField'
-import PassportCountryField from '@/components/Fields/PassportCountryField'
-import DestinationCountryField from '@/components/Fields/DestinationCountry'
-import ChurchMissionField from '@/components/Fields/ChurchMissionField'
+import CountryField from '@/components/Fields/CountryField'
 import StartDateField from '@/components/Fields/StartDateField'
-import LengthCoverageField from '@/components/Fields/LengthCoverageField'
+import TextareaField from '@/components/Fields/TextareaField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -118,28 +113,76 @@ export default function AlphaQuote() {
       <div className="w-full">
         <div className="container">
           <div className="grid grid-cols-1 gap-x-0 gap-y-8 md:grid-cols-5 md:gap-x-[30px]">
-            <div className="col-span-3 space-y-4">
+            <div className="col-span-3 space-y-8">
               <Card>
                 <HeadingTwo>Insured&apos;s Details</HeadingTwo>
                 <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
-                  <FirstNameField />
-                  <LastNameField />
-                  <AgeField />
-                  <SexField />
-                  <EmailField className="col-span-1 md:col-span-2" />
-                  <AgreeField className="col-span-1 md:col-span-2" />
+                  <SingleField title="First Name" fieldId="first_name" type="text" required />
+                  <SingleField title="Last Name" fieldId="last_name" type="text" required />
+                  <SingleField
+                    title="Age"
+                    description="(at Start of Policy)"
+                    fieldId="age"
+                    type="number"
+                    required
+                  />
+                  <SexField required />
+                  <SingleField
+                    title="Email"
+                    className="col-span-1 md:col-span-2"
+                    fieldId="email"
+                    type="email"
+                    required
+                  />
+                  <AgreeField className="col-span-1 md:col-span-2" required />
                 </div>
               </Card>
             </div>
-            <div className="col-span-2 space-y-4">
+            <div className="col-span-2 space-y-8">
               <Card>
                 <HeadingTwo>Program</HeadingTwo>
                 <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
-                  <PassportCountryField className="col-span-1 md:col-span-2" />
-                  <DestinationCountryField className="col-span-1 md:col-span-2" />
-                  <ChurchMissionField className="col-span-1 md:col-span-2" />
+                  <CountryField
+                    title="Passport Country"
+                    className="col-span-1 md:col-span-2"
+                    required
+                  />
+                  <CountryField
+                    title="Destination Country"
+                    description="(Where you are serving overseas)"
+                    className="col-span-1 md:col-span-2"
+                  />
+                  <SingleField
+                    title="Church/Mission"
+                    className="col-span-1 md:col-span-2"
+                    fieldId="church_mission"
+                    placeholder="Mission name..."
+                    type="text"
+                  />
                   <StartDateField />
-                  <LengthCoverageField />
+                  <SingleField
+                    title="Length of Coverage"
+                    fieldId="length_of_coverage"
+                    type="text"
+                    value="1 year"
+                    disabled
+                  />
+                </div>
+              </Card>
+              <Card>
+                <HeadingTwo>Other</HeadingTwo>
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
+                  <SingleField title="Promo Code" fieldId="promo_code" type="text" />
+                  <SingleField title="Referred by" fieldId="referred_by" type="text" />
+                  <TextareaField
+                    title="Any comments or notes you would like to add?"
+                    className="col-span-1 md:col-span-2"
+                  />
+                  <TextareaField
+                    title="How did you hear about us?"
+                    className="col-span-1 md:col-span-2"
+                    required
+                  />
                 </div>
               </Card>
             </div>
