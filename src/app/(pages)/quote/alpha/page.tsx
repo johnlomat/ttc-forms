@@ -10,6 +10,7 @@ import AgreeField from '@/components/Fields/AgreeField'
 import CountryField from '@/components/Fields/CountryField'
 import StartDateField from '@/components/Fields/StartDateField'
 import TextareaField from '@/components/Fields/TextareaField'
+import SpouseField from '@/components/Fields/SpouseField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -135,6 +136,12 @@ export default function AlphaQuote() {
                     required
                   />
                   <AgreeField className="col-span-1 md:col-span-2" required />
+                </div>
+              </Card>
+              <Card>
+                <HeadingTwo>Additional</HeadingTwo>
+                <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
+                  <SpouseField className="col-span-1 md:col-span-2" />
                 </div>
               </Card>
             </div>
