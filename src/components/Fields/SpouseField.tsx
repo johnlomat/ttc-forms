@@ -19,7 +19,7 @@ const SpouseField = ({ className }: FieldProps) => {
             </div>
           </div>
           <SingleField title="Age" description="(at Start of Policy)" type="number" required />
-          <SexField />
+          <SexField required />
         </div>
       </Card>
       <FieldWrapper className={className || ''}>
