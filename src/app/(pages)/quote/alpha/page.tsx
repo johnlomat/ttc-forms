@@ -11,6 +11,7 @@ import CountryField from '@/components/Fields/CountryField'
 import StartDateField from '@/components/Fields/StartDateField'
 import TextareaField from '@/components/Fields/TextareaField'
 import SpouseField from '@/components/Fields/SpouseField'
+import ChildrenField from '@/components/Fields/ChildrenField'
 
 export const metadata: Metadata = {
   title: 'Alpha Quote | Talent Trust',
@@ -142,6 +143,7 @@ export default function AlphaQuote() {
                 <HeadingTwo>Additional</HeadingTwo>
                 <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2">
                   <SpouseField className="col-span-1 md:col-span-2" />
+                  <ChildrenField className="col-span-1 md:col-span-2" />
                 </div>
               </Card>
             </div>
