@@ -1,6 +1,6 @@
-import FieldWrapper from '../ui/FieldWrapper'
+import FieldWrapper from '@/components/ui/FieldWrapper'
 import { Label } from '@radix-ui/react-label'
-import CountryComboBox from '../ui/CountryComboBox'
+import CountryComboBox from '@/components/ui/CountryComboBox'
 import { FieldProps } from '@/types/FieldProps'
 
 const CountryField = ({ title, className, description, required }: FieldProps) => {
